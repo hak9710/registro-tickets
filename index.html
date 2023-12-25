@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Registro de Tickets</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Tickets</h1>
+        <form id="ticketForm">
+            <label for="ticketTipo">Tipo:</label>
+            <select id="ticketTipo" required>
+                <option value="comida">Comida</option>
+                <option value="farmacia">Farmacia</option>
+                <option value="otros">Otros</option>
+            </select>
+
+            <label for="ticketDescripcion">Descripción:</label>
+            <input type="text" id="ticketDescripcion">
+
+            <label for="ticketFecha">Fecha:</label>
+            <input type="date" id="ticketFecha" required>
+
+            <label for="ticketPrecio">Precio (€):</label>
+            <input type="number" id="ticketPrecio" step="0.01" required>
+
+            <button type="button" onclick="registrarTicket()">Registrar Ticket</button>
+            <button type="button" onclick="reiniciarApp()">Reiniciar App</button>
+        </form>
+
+        <div id="ticketList"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
