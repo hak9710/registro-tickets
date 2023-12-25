@@ -15,21 +15,19 @@ function registrarTicket() {
 
     var nuevoTicket = {
         tipo: tipo,
-        descripcion: descripcion || "", // Puede ser un string vacío
+        descripcion: descripcion || "",
         fecha: fecha,
-        precio: parseFloat(precio), // Convertimos a número
+        precio: parseFloat(precio),
     };
 
-    // Enviar datos al servicio web
     enviarDatosAlServicioWeb(nuevoTicket);
 
-    // Actualizar la interfaz de usuario
     cargarTickets();
     document.getElementById("ticketForm").reset();
 }
 
 function enviarDatosAlServicioWeb(ticket) {
-    var url = "https://script.google.com/macros/s/AKfycbyUd05uxrWN2RkGwsXNxJr34rLlbyRZdqaAZRNAObvFONH4pub-EgVPkZKHcRS0oNBt/exec"; // Sustituye con la URL de tu script
+    var url = "URL_DEL_SCRIPT_DE_GOOGLE_APPS"; // Reemplazar con la URL de tu script
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-Type", "application/json");
