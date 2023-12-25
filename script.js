@@ -27,7 +27,7 @@ function registrarTicket() {
 }
 
 function enviarDatosAlServicioWeb(ticket) {
-    var url = "https://script.google.com/macros/s/AKfycbwvvtp9jjciqF_Flyj63KZAq2NKgef9wh1Ehfgs6xA6IkLy4DNZRMX-HZKbEyel16iT/exec"; // Reemplazar con la URL de tu script
+    var url = "https://script.google.com/macros/s/AKfycbzbapo6nVxkMykGxC4sMY4Ehvq8VLxwy1WBEAMlVB-O5_NH3hJGXiNcEzdDG3lvI-t3/exec"; // Reemplazar con la URL de tu script
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-Type", "application/json");
